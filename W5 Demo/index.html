@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W5 Demo | Forms</title>
+</head>
+
+<body>
+
+    <h1>Basic Form Demo</h1>
+
+    <h2>Form w/o Table</h2>
+
+    <form method="" action="">
+
+        <label for="firstName">First Name:</label>
+        <br>
+        <input type="text" id="firstName" name="firstName">
+        <br>
+        <label for="email">Email:</label>
+        <br>
+        <input type="text" id="email" name="email">
+        <input type="submit" value="SUBMIT">
+
+    </form>
+
+    <h2>Form w/ Table</h2>
+
+        <form>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="firstName">First Name:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="firstName" name="firstName">
+                        </td>
+                    </tr>
+                    <tr>
+                         <td> 
+                            <label for="email">Email:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="email" name="email" placeholder="Enter Your Email" required>
+                        </td>      
+                    </tr>
+                    <!--NON-TEXT INPUT TYPES-->
+                    <tr>
+                        <td>
+                            <label for="study">Pick Your Program Study:</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="study" name="study" value="se">Software Engineering<br>
+                            <input type="radio" id="study" name="study" value="cyb">Cybersecurity<br>
+                            <input type="radio" id="study" name="study" value="und">Undecided
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="vehicles">Pick Your Vehicles:</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="vehicle1" value="car">Car <br>
+                            <input type="checkbox" name="vehicle2" value="bike">Bike <br>
+                            <input type="checkbox" name="vehicle3" value="horse">Horse <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="date">Date:</label>
+                        </td>
+                        <td>
+                            <input type="date" name="date" id="date"> <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="favColor">Pick Your Favorite Color:</label>
+                        </td>
+                        <td>
+                            <select name="favColor">
+                                <option value="r">Red</option>
+                                <option value="g">Green</option>
+                                <option value="b">Blue</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="comments">Comments:</label>
+                        </td>
+                        <td>
+                            <textarea name="comments" rows=5 cols=20 placeholder="Type Here..."></textarea>
+                        </td>
+                    </tr>
+                    <!--SUBMIT BUTTON-->
+                    <tr>
+                        <td>
+                            <input type="submit" value="SUBMIT">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+
+
+
+</body>
+
+</html>
