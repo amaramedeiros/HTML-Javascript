@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6 | JS Conditions & Functions</title>
+</head>
+
+<body>
+    
+    <h1> W6 | JS Intro Demo</h1>
+    <h3><a href="index.html">Conditions & Functions Demo</a></h3>
+
+    <!--in-document Javascript-->
+    <script>
+
+        var preference = prompt(`Welcome to Good Burger, home of the Good Burger, 
+        may I take your order? \ntype 'yes' or 'no'`)
+
+        //functions must be defined before they can be called
+        function checkDining(_preference)
+        {
+            console.log(`checkDining() has been reached`)
+            //use console.log for testing
+
+            if(preference.toLowerCase() === `yes`)
+            {
+                console.log(`take-out`)
+                return `TAKE_OUT`
+            }
+            else
+            {
+                console.log(`dine-in`)
+                return `DINE_IN`
+            }
+
+        }//checkDining() close
+
+        var dining = checkDining(preference) //return is stored to dining var to be used later
+        console.log(dining)
+
+        var order = prompt(`Thank you for your decision\nI'll be taking your order now, please enter
+        the number of items you wish to purchase:\n1. Hamburger\n2. French Fries\,3. Milkshake`)
+        console.log(order)
+
+        function foodOrDrink(_order)
+        {
+            if(_order < 3)
+            {
+                return `You want some FOOD.`
+            }
+            else if(_order === 3)
+            {
+                return `Milkshake time!`
+            }
+            else
+            {
+                return `That ia not a valid option.`
+            }
+        }//fodOrDrink() close
+
+        alert(`Your choice: ${foodOrDrink(Number(order))}`)
+
+        function calcPriceWithTax(_price, _tax)
+        {
+            var newPrice = _price + (_price * (_tax/100))
+            return newPrice
+        }
+
+        function getItem(_order)
+        {
+            if(_order === `1`)
+            {
+                return `Hamburger`
+            }
+            else if(_order === `2`)
+            {
+                return `French Fries`
+            }
+            else if(_order === `3`)
+            {
+                return `Milkshake!`
+            }
+            else
+            {
+                return `Nothing`
+            }
+        }//getItem() close
+
+        var item = getItem(order)
+        console.log(item)
+
+        function getTotal(_item, _tax)
+        {
+            switch(_item)
+            {
+                case `Hamburger`:
+                    return calcPriceWithTax(3.00, _tax)
+                    break;
+
+                case `French Fries`:
+                    return calcPriceWithTax(1.00, _tax)
+                    break;
+
+                case `Milkshake`:
+                    return calcPriceWithTax(5.00, _tax)
+                    break;
+
+                case `Nothing`:
+                    return calcPriceWithTax(0.00, _tax)
+                    break;
+            }
+        }//getTotal() close
+
+        var total = getTotal(item, 20)
+        console.log(`The total price for a ${item} with tax is $${total.toFixed(2)}`)
+
+    </script>
+
+</body>
+
+</html>

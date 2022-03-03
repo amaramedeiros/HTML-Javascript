@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6 | Pay Calculator</title>
+    <meta name="author" content="Amara Medeiros">
+
+</head>
+
+<body>
+
+    <h1>W6 | Pay Calculator</h1>
+
+    <script>
+
+        var rate
+        var hours
+        var taxRate
+
+        var rate = Number(prompt(`Enter your hourly rate: `))
+        console.log(rate)
+        var hours = Number(prompt(`Enter amount of hours worked: `))
+        console.log(hours)
+        var taxRate = Number(0.2)
+
+        var gross = rate * hours
+        var taxAmount = gross * taxRate
+        var net = gross - taxAmount
+
+        gross = Number(gross)
+        taxAmount = Number(taxAmount)
+        net = Number(net)
+
+        alert(`Gross Pay: $${gross.toFixed(2)}, Uncle Sam's Share: $${taxAmount.toFixed(2)}, Net Pay: $${net.toFixed(2)}`)
+            
+    </script>
+    
+</body>
+
+</html>

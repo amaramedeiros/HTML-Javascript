@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <h1> W6 | JS Intro Demo</h1>
+    <h3><a href="secondDemo.html">Conditions Demo</a></h3>
+
+    <script>
+        //in here we write in Javascript (single line comment)
+        
+
+        //Declaration of variables - starting names to be used as variables
+        var num //declaration only
+
+        num = 0 //assignment only - cannot happen before declaration
+        
+
+        //combine declaration & assignment
+        var num1 = 10
+        var num2 = 7
+
+        //basic processing with vars - variable must be defined before it can be used
+        var sum = num1 + num2
+
+        //output display; 2 types: one for testing, one for user
+        console.log(num) //for testing, var only displays stored value
+        console.log("Hello World!")
+        //combine messages & stored value using literal strings
+        //standard string uses "" or '', for messages only
+        //literal string uses '' allows for message + stored value
+        console.log(`The sum of ${num1.toFixed} + ${num2.toFixed} = ${sum.toFixed(2)}`)
+
+        //outage display to user
+        //alert() creates a pop-up that will not allow the user to "move forward" until
+        //they interact with the pop-up; it also pauses the reading of code
+        alert(`The sum of ${num1.toFixed} + ${num2.toFixed} = ${sum.toFixed(2)}`)
+
+        console.log(`alert passed`)
+
+        //input - gain data directly from user via keyboard
+        var name = prompt(`Enter your name: `)
+        //if you need to use the data, store the prompt() return to a declared var
+
+        console.log(name)
+        alert(`Hi there, ${name}!`)
+
+        //all data returned from prompt() is string data
+        var num = Number(prompt(`Enter the number 7: `))
+        console.log(num)
+
+        //for numeric data, cast as a Number()
+        num = Number(num)
+
+        if(num === 7)
+        {
+            console.log(`num is both equal in value and type`)
+        }
+        else if(num == 7)
+        {
+            console.log(`num is only equal in value to 7`)
+        }
+        else
+        {
+            console.log(`num is not equal to 7`)
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
